@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="ja">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Spring Security Sample</title>
+
+    <link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/theme.css}" rel="stylesheet"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.js}"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/user" class="nav-link">/user</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="nav-link">/admin</a>
+                    </li>
+                </ul>
+                <li>
+                    <form class="navbar-form navbar-right" method="post" th:action="@{/logout}">
+                        <button type="submit" class="btn btn-secondary">ログアウト</button>
+                    </form>
+                </li>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container" role="main">
+    <div class="page-header">
+        <h1>管理者用画面</h1>
+    </div>
+</div>
+</body>
+</html>
